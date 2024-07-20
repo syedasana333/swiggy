@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import Hero from './components/Hero';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div>
+            <Header />
+            <Hero />
+            
+        </div>        
+    )
+}; 
 
 export default App;
+
+// DO NOT FOCUS ON UI
+
+//get swiggy API
+// top restaurant filter
+// search filter 
+// lazy loading
+// filter button - done
+// fix filter case sensitivity
