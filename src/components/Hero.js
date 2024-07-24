@@ -3,6 +3,7 @@ import Card from './Card';
 import {IMAGE_URL} from "../utils/constants";
 import { getData } from '../api/restaurant';
 import Shimmer from './Shimmer';
+import CORS from './CORS';
 
 
 const Hero = () => {
@@ -10,6 +11,7 @@ const Hero = () => {
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const [isFiltered, setIsFiltered] = useState(false);
     const [searchText, setSearchText] = useState([]);
+    const [apiFailed, setApiFailed] = useState(false);
 
     useEffect(() => {
         handleGetData();
@@ -18,6 +20,10 @@ const Hero = () => {
     
     const handleGetData = async () => {
         const restaurantList = await getData();
+
+        if(!restaurantList){
+            setApiFailed(true);
+        }
 
         setListOfRestaurant(restaurantList);
         setFilteredRestaurant(restaurantList);
@@ -41,8 +47,11 @@ const Hero = () => {
         setFilteredRestaurant(filterList);
     }
 
+    if (apiFailed) {
+        return <CORS />;
+    }
 
-    return listOfRestaurant.length === 0 ? <Shimmer/> : (
+    return  listOfRestaurant?.length === 0 ? (<Shimmer/>) : (
         <div className="hero-section">
 
             <div className='search-container'>
@@ -63,7 +72,7 @@ const Hero = () => {
                 {
                     filteredRestaurant?.map((res) => {
                         res = res.info;
-                        return <Card img={IMAGE_URL + res.cloudinaryImageId} resName={res.name} rating={res.avgRating} deliveryTime={res.sla.slaString} cuisine={res.cuisines.join(', ')} key={res.id}/>
+                        return <Card img={IMAGE_URL + res?.cloudinaryImageId} resName={res?.name} rating={res?.avgRating} deliveryTime={res?.sla?.slaString} cuisine={res?.cuisines.join(', ')} key={res?.id}/>
                     })
                 }
             </div>

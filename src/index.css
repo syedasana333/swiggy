@@ -78,7 +78,8 @@ h3{
 }
 
 .card{
-  width: 228px;
+  flex: 1;
+  min-width: 228px;
   transition: .4s ease-in-out;
 }
 
@@ -181,4 +182,24 @@ input{
   height: 14px;
   border-radius: 8px;
   width: 70%;
+}
+
+.cors-error{
+  width: 60%;
+  margin: 32px auto;
+}
+
+.cors-error li{
+  margin-left: 40px;
+  line-height: 1.6;
+}
+
+.cors-error p{
+  margin-top: 12px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.cors-error h1{
+  margin: 56px 0px 32px;
 }

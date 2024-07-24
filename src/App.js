@@ -13,11 +13,3 @@ const App = () => {
 
 export default App;
 
-// DO NOT FOCUS ON UI
-
-//get swiggy API
-// top restaurant filter
-// search filter 
-// lazy loading
-// filter button - done
-// fix filter case sensitivity

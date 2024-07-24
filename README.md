@@ -68,3 +68,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Enabling CORS
+
+To run this project, you need to enable CORS (Cross-Origin Resource Sharing). You can do this easily using a browser extension.
+
+## Steps to Enable CORS:
+
+
+### Install a CORS Extension:
+
+#### Google Chrome:
+
+Go to the Allow CORS: Access-Control-Allow-Origin extension on the Chrome Web Store.
+Click "Add to Chrome" to install the extension.
+
+#### Mozilla Firefox:
+
+Go to the CORS Everywhere extension on the Firefox Add-ons page.
+Click "Add to Firefox" to install the extension.
+
+### Enable the Extension:
+
+After installing the extension, you need to enable it:
+
+#### For Chrome:
+Click the extension icon in the toolbar and toggle the switch to enable it.
+#### For Firefox:
+Click the extension icon in the toolbar and check the box "Enable CORS Everywhere."
