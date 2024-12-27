@@ -4,8 +4,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div className="header">
-            <img className="logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_260/portal/m/seo/Logos/Swiggy/Swiggy%20logo-2.png
-        " alt="Image of Swiggy Logo" />
+            <img className="logo" src="" alt="Image of Swiggy Logo" />
 
             <nav className="navbar">
                 <ul>
