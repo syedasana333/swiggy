@@ -1,4 +1,5 @@
 import React from 'react';
+import {IMAGE_URL} from "../public/Swiggy logo-2.avif";
 
 
 const Header = () => {
